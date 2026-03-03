@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Alert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+    .warning-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      gap: 15px;
+    }
+    .warning-icon {
+      font-size: 48px;
+      color: #ff4444;
+    }
+    .warning-title {
+      color: #ff4444;
+      margin: 0;
+      font-size: 24px;
+    }
+    .domain-comparison {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    .domain-row {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    .domain-label {
+      min-width: 100px;
+      font-weight: bold;
+      color: #666;
+    }
+    .domain-value {
+      font-family: monospace;
+      font-size: 16px;
+      padding: 8px 12px;
+      background: white;
+      border-radius: 4px;
+      flex-grow: 1;
+    }
+    .fake-domain {
+      border: 2px solid #ff4444;
+      background-color: #fff5f5;
+    }
+    .real-domain {
+      border: 2px solid #28a745;
+      background-color: #f2fff5;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+    .btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background-color: #28a745;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #218838;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .btn-secondary:hover {
+      background-color: #5a6268;
+    }
+    .warning-text {
+      color: #666;
+      line-height: 1.5;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="warning-header">
+      <h1 class="warning-title">Potential Phishing Attempt Detected</h1>
+    </div>
+    
+    <p class="warning-text">
+      The website you're trying to visit looks suspiciously similar to a legitimate website. 
+      This might be a phishing attempt to steal your information.
+    </p>
+
+    <div class="domain-comparison">
+      <div class="domain-row fake-domain">
+        <span class="domain-label">Suspicious:</span>
+        <div class="domain-value" id="suspicious-domain"></div>
+      </div>
+      <div class="domain-row real-domain">
+        <span class="domain-label">Legitimate:</span>
+        <div class="domain-value" id="legitimate-domain"></div>
+      </div>
+    </div>
+
+    <p class="warning-text">
+      Please verify the website URL carefully. Would you like to:
+    </p>
+
+    <div class="buttons">
+      <button class="btn btn-primary" id="goto-legitimate">Go to Legitimate Site</button>
+      <button class="btn btn-secondary" id="go-back">Go Back</button>
+    </div>
+  </div>
+
+  <script src="phishing.js"></script>
+</body>
+</html> 

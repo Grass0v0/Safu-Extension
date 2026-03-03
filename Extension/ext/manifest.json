@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Safu Extension",
+  "version": "1.0.999",
+  "description": ":)",
+  "icons": {
+    "16": "images/safu16.png",
+    "48": "images/safu48.png",
+    "128": "images/safu128.png"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://domain.com/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [{
+    "resources": ["blocked.html", "dashboard.html", "phishing.html"],
+    "matches": ["<all_urls>"]
+  }]
+} 

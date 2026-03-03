@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Domain Blocked</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+    .warning-icon {
+      font-size: 48px;
+      color: #dc3545;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #dc3545;
+      margin-bottom: 20px;
+    }
+    .domain {
+      font-family: monospace;
+      background-color: #f8f9fa;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+      display: inline-block;
+    }
+    .buttons {
+      margin-top: 30px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .back-button {
+      background-color: #6c757d;
+      color: white;
+    }
+    .whitelist-button {
+      background-color: #28a745;
+      color: white;
+    }
+    .legitimate-domain {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+    }
+    .legitimate-domain a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .legitimate-domain a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="content">
+      Loading...
+    </div>
+    <div class="buttons">
+      <button id="go-back" class="back-button">Go Back</button>
+      <button id="whitelist-btn" class="whitelist-button" style="display: none;" onclick="addToWhitelist()">Add to Whitelist</button>
+    </div>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html> 
